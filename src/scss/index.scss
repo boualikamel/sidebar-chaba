@@ -1,0 +1,95 @@
+body{
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Knewave&display=swap");
+.sidebar {
+  color: #512b58;
+  font-family: "Knewave", cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 230px;
+  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  .profile {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    display: inline-block;
+    .profile-pic {
+      height: 80%;
+      border-radius: 50%;
+      box-shadow: 0px 0px 30px 0px rgba(20, 6, 20, 0.43);
+    }
+  }
+  ul {
+    padding: 0;
+    li {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      height: 60px;
+      width: 80%;
+      text-align: center;
+      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      margin-top: 1.3rem;
+      border-radius: 0px 10px 10px 0px;
+      transition: all 0.3s;
+      box-shadow: 0px 0px 20px 0px rgba(20, 6, 20, 0.43);
+      &::after {
+        content: "";
+        width: 0px;
+        transition: all 0.3s;
+      }
+      &:hover {
+        &::after {
+          height: 100%;
+          width: 14px;
+          background-image: radial-gradient(
+            circle 926px at 2.7% 11%,
+            rgba(17, 29, 94, 1) 0%,
+            rgba(178, 31, 102, 1) 90%
+          );
+          position: absolute;
+          right: 0px;
+        }
+      }
+      font-size: 1.5rem;
+      img {
+      
+        flex: 1;
+       
+      }
+      p {
+        flex: 3;
+        z-index: 2;
+        margin: auto;
+      }
+    }
+    .selected {
+      height: 80px;
+      width: 110%;
+      &::after {
+        height: 100%;
+        width: 75%;
+        background-image: radial-gradient(
+          circle 926px at 2.7% 11%,
+          rgba(17, 29, 94, 1) 0%,
+          rgba(178, 31, 102, 1) 90%
+        );
+        position: absolute;
+        right: 0px;
+      }
+      &:hover {
+        &::after {
+          width: 70%;
+        }
+      }
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+}
